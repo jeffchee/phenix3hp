@@ -1,15 +1,13 @@
-var express = require('express');
-var path = require('path');
+// server.js
 
-var app = express();
+const express = require('express');
+const app = express();
+const path = require('path');
 
-var PORT = process.env.PORT || 3000;
-
-app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname + 'index1.html'));
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index1.html'));
 });
 
-
-app.listen(PORT, function(){
-    console.log("listening on port " + PORT);
-})
+app.listen(process.env.PORT || 4000, function(){
+    console.log('Your node js server is running');
+});
